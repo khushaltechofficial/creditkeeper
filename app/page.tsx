@@ -108,8 +108,8 @@ export default function Home() {
               
               <div className="text-center relative z-10">
                 <ShieldCheck size={64} className="text-blue-400 mx-auto mb-6" />
-                <h3 className="text-2xl font-bold text-white mb-2">100% Secure & Offline</h3>
-                <p className="text-gray-400 max-w-sm mx-auto">Your ledger data is encrypted and saved directly on your device. Complete privacy, zero compromises.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Real-time Cloud Sync</h3>
+                <p className="text-gray-400 max-w-sm mx-auto">Your ledger data is encrypted and synced instantly to the cloud. Access your business records securely from anywhere.</p>
               </div>
             </div>
           </div>

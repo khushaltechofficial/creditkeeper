@@ -27,8 +27,8 @@ const features = [
   },
   {
     icon: Smartphone,
-    title: "Works 100% Offline",
-    description: "Access your ledger, add entries, and view history even without an active internet connection."
+    title: "Cloud Synchronization",
+    description: "Your business data is safely stored in the cloud. Access your ledger from any device instantly."
   },
   {
     icon: Shield,
