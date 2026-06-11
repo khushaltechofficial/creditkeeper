@@ -3,7 +3,7 @@ import { ArrowRight, BarChart3, Bell, Lock, Smartphone, Users, CheckCircle } fro
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 text-gray-900">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -11,9 +11,9 @@ export default function Home() {
             💳 Credit Keeper
           </div>
           <div className="flex gap-6 items-center">
-            <a href="#features" className="text-gray-600 hover:text-gray-900 transition">Features</a>
-            <a href="#about" className="text-gray-600 hover:text-gray-900 transition">About</a>
-            <a href="/privacy" className="text-gray-600 hover:text-gray-900 transition">Privacy</a>
+            <Link href="/features" className="text-gray-600 hover:text-gray-900 transition">Features</Link>
+            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition">About</Link>
+            <Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition">Privacy</Link>
             <a href="https://play.google.com" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
               Download
             </a>
@@ -35,9 +35,9 @@ export default function Home() {
               <a href="https://play.google.com" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
                 Download Now <ArrowRight size={20} />
               </a>
-              <a href="#features" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">
+              <Link href="/features" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
           <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl h-96 flex items-center justify-center">
@@ -49,84 +49,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12">Powerful Features</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Customer Management",
-                description: "Easily add and manage all your customers in one place with complete profiles"
-              },
-              {
-                icon: BarChart3,
-                title: "Payment Tracking",
-                description: "Track payments, due dates, and payment history with detailed analytics"
-              },
-              {
-                icon: Bell,
-                title: "Smart Notifications",
-                description: "Get reminders for upcoming payments and never miss a transaction"
-              },
-              {
-                icon: Lock,
-                title: "Secure & Private",
-                description: "Your data is encrypted and protected with PIN/biometric authentication"
-              },
-              {
-                icon: Smartphone,
-                title: "Works Offline",
-                description: "Access your data even without internet connection"
-              },
-              {
-                icon: CheckCircle,
-                title: "Bill Management",
-                description: "Upload and organize bills with photos and generate payment receipts"
-              }
-            ].map((feature, i) => (
-              <div key={i} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                <feature.icon size={40} className="text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section id="about" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-indigo-100 to-blue-100 rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center">
-                <BarChart3 size={100} className="text-indigo-600 mx-auto mb-4" />
-                <p className="text-gray-600">Advanced Analytics</p>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-4xl font-bold mb-6">Why Choose Credit Keeper?</h2>
-              <ul className="space-y-4">
-                {[
-                  "Simple and intuitive interface - no learning curve",
-                  "Works perfectly for small shops and large businesses",
-                  "100% data privacy - your data stays on your device",
-                  "No hidden fees or subscriptions",
-                  "Regular updates with new features",
-                  "24/7 support available"
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-3 items-start">
-                    <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-600 py-20">
@@ -154,8 +76,8 @@ export default function Home() {
             <div>
               <h4 className="text-white font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#features" className="hover:text-white transition">Features</a></li>
-                <li><a href="#about" className="hover:text-white transition">About</a></li>
+                <li><Link href="/features" className="hover:text-white transition">Features</Link></li>
+                <li><Link href="/about" className="hover:text-white transition">About</Link></li>
               </ul>
             </div>
             <div>
