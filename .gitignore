@@ -80,8 +80,6 @@ decompiled_apk/
 apk_decompiled/
 api_backup/
 web/
-lib/
-android/
 *.dart
 .metadata
 .packages
