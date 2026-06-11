@@ -1,99 +1,131 @@
+"use client";
+
 import Link from 'next/link';
-import { ArrowRight, BarChart3, Bell, Lock, Smartphone, Users, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Smartphone, ShieldCheck, Zap, Star } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 text-gray-900">
+    <div className="min-h-screen bg-[#0a0f1c] text-white overflow-hidden relative">
+      {/* Background glowing orbs */}
+      <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-600/30 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-indigo-600/20 blur-[120px] rounded-full pointer-events-none" />
+
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#0a0f1c]/70 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent flex items-center gap-2">
             💳 Credit Keeper
-          </div>
-          <div className="flex gap-6 items-center">
-            <Link href="/features" className="text-gray-600 hover:text-gray-900 transition">Features</Link>
-            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition">About</Link>
-            <Link href="/privacy" className="text-gray-600 hover:text-gray-900 transition">Privacy</Link>
-            <a href="https://play.google.com" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-              Download
+          </Link>
+          <div className="flex gap-8 items-center">
+            <Link href="/features" className="text-sm font-medium text-gray-300 hover:text-white transition">Features</Link>
+            <Link href="/about" className="text-sm font-medium text-gray-300 hover:text-white transition">About</Link>
+            <a href="https://play.google.com" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-5 py-2 rounded-full text-sm font-medium transition-all hover:scale-105 active:scale-95">
+              Download App
             </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-              Manage Your Customer Credits Easily
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Credit Keeper helps you track customer accounts, manage payments, and grow your business with confidence. Simple, secure, and powerful.
-            </p>
-            <div className="flex gap-4 flex-wrap">
-              <a href="https://play.google.com" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
-                Download Now <ArrowRight size={20} />
-              </a>
-              <Link href="/features" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition">
-                Learn More
-              </Link>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <Smartphone size={100} className="text-blue-600 mx-auto mb-4" />
-              <p className="text-gray-600">Credit Keeper Mobile App</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-8"
+        >
+          <Zap size={16} /> #1 App for Business Owners & Shopkeepers
+        </motion.div>
+        
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight"
+        >
+          Manage Customer Credits <br className="hidden md:block" /> with <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Absolute Ease</span>.
+        </motion.h1>
 
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-xl text-gray-400 max-w-2xl mb-12"
+        >
+          Replace your traditional ledger with a powerful, secure, and modern digital khata. Track payments, send reminders, and grow your business today.
+        </motion.p>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Manage Your Credits Better?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Download Credit Keeper today and start organizing your customer accounts
-          </p>
-          <a href="https://play.google.com" className="inline-block bg-white text-blue-600 px-10 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
-            Download on Play Store
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-4 w-full justify-center px-4"
+        >
+          <a href="https://play.google.com" className="group flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-semibold transition-all hover:shadow-[0_0_40px_8px_rgba(37,99,235,0.3)] hover:scale-105 active:scale-95">
+            Get it on Play Store
+            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </a>
-        </div>
+          <Link href="/features" className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 active:scale-95">
+            Explore Features
+          </Link>
+        </motion.div>
+
+        {/* Social Proof */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="mt-12 flex items-center gap-4 text-gray-400 text-sm"
+        >
+          <div className="flex -space-x-2">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="w-8 h-8 rounded-full border-2 border-[#0a0f1c] bg-gray-700 flex items-center justify-center">
+                <Star size={12} className="text-yellow-400" />
+              </div>
+            ))}
+          </div>
+          <p>Trusted by <span className="text-white font-medium">10,000+</span> businesses</p>
+        </motion.div>
+
+        {/* Floating App Mockup (Visual Polish) */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-20 w-full max-w-4xl h-64 md:h-96 rounded-t-3xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent flex items-end justify-center overflow-hidden relative"
+        >
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+          <div className="w-[80%] h-[90%] bg-[#0f172a] rounded-t-2xl border-t border-l border-r border-white/10 shadow-2xl flex flex-col relative z-10">
+            <div className="h-12 border-b border-white/10 flex items-center px-4 gap-2 bg-[#1e293b]/50">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+            </div>
+            <div className="flex-1 p-8 flex items-center justify-center relative overflow-hidden">
+              <div className="absolute top-10 left-10 w-32 h-32 bg-blue-500/20 blur-3xl rounded-full"></div>
+              <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/20 blur-3xl rounded-full"></div>
+              
+              <div className="text-center relative z-10">
+                <ShieldCheck size={64} className="text-blue-400 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-2">100% Secure & Offline</h3>
+                <p className="text-gray-400 max-w-sm mx-auto">Your ledger data is encrypted and saved directly on your device. Complete privacy, zero compromises.</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="text-white font-bold mb-4">Credit Keeper</h3>
-              <p className="text-sm">Manage your customer credits with ease and confidence.</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/features" className="hover:text-white transition">Features</Link></li>
-                <li><Link href="/about" className="hover:text-white transition">About</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition">Terms of Service</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-4">Contact</h4>
-              <p className="text-sm">Email: smartkhushal2007@gmail.com</p>
-            </div>
+      <footer className="border-t border-white/10 bg-[#0a0f1c] py-12 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-gray-400 text-sm">
+            &copy; 2026 Credit Keeper. All rights reserved.
           </div>
-          <div className="border-t border-gray-800 pt-8">
-            <p className="text-center text-sm">&copy; 2026 Credit Keeper. All rights reserved.</p>
+          <div className="flex gap-6 text-sm">
+            <Link href="/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link>
+            <Link href="/terms" className="text-gray-400 hover:text-white transition">Terms of Service</Link>
+            <a href="mailto:smartkhushal2007@gmail.com" className="text-gray-400 hover:text-white transition">Contact Support</a>
           </div>
         </div>
       </footer>
