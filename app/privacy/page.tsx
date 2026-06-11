@@ -96,6 +96,7 @@ export default function Privacy() {
           <div className="flex gap-6 text-sm">
             <Link href="/privacy" className="text-white transition">Privacy Policy</Link>
             <Link href="/terms" className="text-gray-400 hover:text-white transition">Terms of Service</Link>
+            <Link href="/delete-account" className="text-gray-400 hover:text-white transition">Delete Account</Link>
           </div>
         </div>
       </footer>

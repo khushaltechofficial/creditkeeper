@@ -89,6 +89,7 @@ export default function Terms() {
           <div className="flex gap-6 text-sm">
             <Link href="/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link>
             <Link href="/terms" className="text-white transition">Terms of Service</Link>
+            <Link href="/delete-account" className="text-gray-400 hover:text-white transition">Delete Account</Link>
           </div>
         </div>
       </footer>

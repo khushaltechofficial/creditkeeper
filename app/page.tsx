@@ -125,6 +125,7 @@ export default function Home() {
           <div className="flex gap-6 text-sm">
             <Link href="/privacy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link>
             <Link href="/terms" className="text-gray-400 hover:text-white transition">Terms of Service</Link>
+            <Link href="/delete-account" className="text-gray-400 hover:text-white transition">Delete Account</Link>
             <a href="mailto:smartkhushal2007@gmail.com" className="text-gray-400 hover:text-white transition">Contact Support</a>
           </div>
         </div>
