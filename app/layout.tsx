@@ -5,9 +5,8 @@ import { Toaster } from '@/components/ui/toaster'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Credit Keeper',
+  description: 'Manage Customer Credits Easily with Absolute Confidence.',
 }
 
 export default function RootLayout({
