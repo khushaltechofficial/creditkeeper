@@ -1,0 +1,12 @@
+android/
+ios/
+lib/
+decompiled_apk/
+apk_decompiled/
+jadx/
+RECOVERED_PROJECT/
+test/
+*.sql
+*.bat
+*.ps1
+*.iml

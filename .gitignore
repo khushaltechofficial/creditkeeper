@@ -1,0 +1,118 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+.next
+out
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Android/Flutter build artifacts
+build/
+.gradle/
+*.apk
+*.aab
+*.jks
+gradlew
+gradlew.bat
+local.properties
+*.iml
+.idea/
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+pubspec.yaml.bak
+
+# Large files & archives
+*.zip
+*.rar
+*.7z
+jadx/
+jadx.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Project specific
+RECOVERED_PROJECT/
+decompiled_apk/
+apk_decompiled/
+api_backup/
+web/
+lib/
+android/
+*.dart
+.metadata
+.packages
+.dart_tool/
+pubspec.lock
+*.config.ts
+capacitor.config.ts
+*.md
+!README.md
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Decompiled/APK analysis
+apk_decompiled/
+decompiled_apk/
+jadx/
+RECOVERED_PROJECT/
+
+# Test files
+test/widget_test.dart
+test/
+
+# Database and SQL files  
+*.sql
+
+.vercel
+.env*
+
+.vercel
+.env*
