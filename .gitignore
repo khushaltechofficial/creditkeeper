@@ -85,7 +85,7 @@ web/
 .packages
 .dart_tool/
 pubspec.lock
-*.config.ts
+
 capacitor.config.ts
 *.md
 !README.md
